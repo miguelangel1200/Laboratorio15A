@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color:greenyellow;
+            width: 420px;
+            font-size: 20px;
+            padding: 10px;
+        }
+        footer{
+            background-color:greenyellow;
+            width: 420px;
+            /* font-size: 20px; */
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <h1>Registro de trabajadores</h1>
+        <form method="POST">
+            <table>
+                <tr>
+                    <td>Rut:</td>
+                    <td><input type="number" name="nombre" id="rut" placeholder="Sin puntos ni guion"></td>
+                </tr>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="" id="nombre1"></td>
+                </tr>
+                <tr>
+                    <td>Apellido Paterno:</td>
+                    <td><input type="text" name="" id="apellido2"></td>
+                </tr>
+                <tr>
+                    <td>Apellido Materno:</td>
+                    <td><input type="text" name="" id="materno3"></td>
+                </tr>
+                
+                <tr>
+                    <td>Sexo</td>
+                    <td>
+                        <input type="radio" name="sexo" value="H">Masculino
+                        <input type="radio" name="sexo" value="M">Femenino
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nivel de estudios:</td>
+                    <td><input type="checkbox" id="tecni">No tiene</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="checkbox"  id="tecni">Técnico</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="checkbox" id="tecni">Universitario</td>
+                </tr>
+                <tr>
+                    <td>Ciudad de Nacimiento: </td>
+                    <td>
+                        <input list="buscar">
+                        <datalist id="buscar">
+                            <option >Lima</option>
+                            <option >Arequipa</option>
+                            <option >Trujillo</option>
+                            <option >Piura</option>
+                        </datalist>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Curriculum</td>
+                    <td><input type="file" name="archivo" accept=".pdf"></td>
+                </tr>
+                <tr>
+                    <td>Foto</td>
+                    <td><input type="file" name="archivo" accept="image/*"></td>
+                </tr>
+            </table>
+            <footer>
+                
+                <input type="button" onclick="salida()" value="Registrar trabajador">
+            </footer>
+            
+        </form>
+
+
+
+    </div>
+
+
+
+    <script>
+
+        function salida(){
+            var ruc = document.getElementById("rut").value;
+            var nombre = document.getElementById("nombre1").value;
+            var apellidoPa = document.getElementById("apellido2").value;
+            var apellidoMa = document.getElementById("materno3").value;
+        }
+    </script>
+</body>
+</html>
